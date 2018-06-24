@@ -1,7 +1,24 @@
 
-lxqt-build-tools-0.4.0 / 2017-09-22
+lxqt-build-tools-0.5.0 / 2018-05-21
 ===================================
 
+  * Bump version to 0.5.0
+  * Prevent in-source builds
+  * Adds an PreventInSourceBuilds module
+  * http --> https
+  * Fixed some LXDE mentions
+  * LXQtCompilerSettings: Set CMAKE_C_VISIBILITY_PRESET to hidden
+  * Don't allow Qt foreach/Q_FOREACH
+  * Update CMakeLists.txt
+  * Require Qt 5.7.1
+  * Adds a FindXKBCommon CMake module
+  * Adds ECMFindModuleHelpers CMake module
+  * Don't export github templates
+
+0.4.0 / 2017-09-22
+==================
+
+  * Release 0.4.0: Update changelog
   * Bump version to 0.4.0
   * Added needed versions
   * remove version set from LXQtConfigVars.in

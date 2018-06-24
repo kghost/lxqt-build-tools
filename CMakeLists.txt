@@ -5,18 +5,19 @@ cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 option(WITH_XDG_DIRS_FALLBACK "Use our XDG_CONFIG_DIRS fallback" ON)
 
 set(LXQT_BUILD_TOOLS_MAJOR_VERSION 0)
-set(LXQT_BUILD_TOOLS_MINOR_VERSION 4)
+set(LXQT_BUILD_TOOLS_MINOR_VERSION 5)
 set(LXQT_BUILD_TOOLS_PATCH_VERSION 0)
 set(LXQT_BUILD_TOOLS_VERSION ${LXQT_BUILD_TOOLS_MAJOR_VERSION}.${LXQT_BUILD_TOOLS_MINOR_VERSION}.${LXQT_BUILD_TOOLS_PATCH_VERSION})
 
 
 # Check for needed versions
-# We need at least Qt 5.6.1 and glib-2.0 >= 2.50 to build all LXQt parts
-find_package(Qt5Core "5.6.1"  REQUIRED)
+# We need at least Qt 5.7.1 and glib-2.0 >= 2.50 to build all LXQt parts
+find_package(Qt5Core "5.7.1"  REQUIRED)
 
 include(CMakePackageConfigHelpers)
 include(GNUInstallDirs) # Standard directories for installation
 include(cmake/FindInstallConfigPath.cmake) # sets LXQT_ETC_XDG_DIR, if unset
+include(cmake/modules/LXQtPreventInSourceBuilds.cmake)
 
 #-----------------------------------------------------------------------------
 # LXQT_DATA_DIR defaults to CMAKE_INSTALL_FULL_DATADIR. It's added to
